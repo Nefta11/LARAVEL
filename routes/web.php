@@ -1,4 +1,4 @@
-<?php
+1   <?php
 
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/user/{name}', function($name){
+
+    return $name;
+})-> where('name','[A-Za-z]');
 
 Auth::routes();
 
