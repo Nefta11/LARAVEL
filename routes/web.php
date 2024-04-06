@@ -26,4 +26,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get ('/micontroller',[AdminController::class, 'index1']);
+Route::get ('/micontroller',[AdminController::class, 'index']);
+
+Route::get ('/micontroller2',[AdminController::class, 'index1']);
+
+Route::get ('/micontroller3',[AdminController::class, 'index2']);
