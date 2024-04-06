@@ -3,6 +3,8 @@
     use Illuminate\Support\Facades\Route;
 
     use App\Http\Controllers\Admin\AdminController;
+    use App\Http\Controllers\UserController;
+    
     /*
 |--------------------------------------------------------------------------
 | Rutas Web
@@ -52,3 +54,8 @@
             return 'terceraa....';
         });
     });
+
+
+
+
+    Route::get('/nombre/{name}', [UserController::class, 'showname']);
