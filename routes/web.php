@@ -29,11 +29,26 @@
 
     // Agrupamos nuestras rutas en un grupo de la siguiente manera 
 
-    Route::namespace('Admin')-> group (function () {
+    Route::namespace('Admin')->group(function () {
 
         Route::get('/micontroller', [AdminController::class, 'index']);
 
         Route::get('/micontroller2', [AdminController::class, 'index1']);
 
         Route::get('/micontroller3', [AdminController::class, 'index2']);
+    });
+
+
+    Route::prefix('seccion')->group(function () {
+        Route::get('/uno', function () {
+            return 'Primera....';
+        });
+
+        Route::get('/dos', function () {
+            return 'segundaa....';
+        });
+
+        Route::get('/tres', function () {
+            return 'terceraa....';
+        });
     });
