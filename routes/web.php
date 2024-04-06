@@ -56,6 +56,7 @@
     });
 
 
+    Route::get('/inicio', [UserController::class, 'index']);
 
 
     Route::get('/nombre/{name}', [UserController::class, 'showname']);
