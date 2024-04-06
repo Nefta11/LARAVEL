@@ -26,7 +26,10 @@
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-    Route::group(['namespace' => 'Admin'], function () {
+
+    // Agrupamos nuestras rutas en un grupo de la siguiente manera 
+
+    Route::namespace('Admin')-> group (function () {
 
         Route::get('/micontroller', [AdminController::class, 'index']);
 
