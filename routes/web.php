@@ -1,9 +1,9 @@
-1   <?php
+1 <?php
 
-use Illuminate\Support\Facades\Route;
+    use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Admin\AdminController;
-/*
+    use App\Http\Controllers\Admin\AdminController;
+    /*
 |--------------------------------------------------------------------------
 | Rutas Web
 | Aquí es donde puedes registrar rutas web para tu aplicación. Estas
@@ -12,22 +12,25 @@ use App\Http\Controllers\Admin\AdminController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
-Route::get('/user/{name}', function($name){
+    Route::get('/user/{name}', function ($name) {
 
-    return $name;
-})-> where('name','[A-Za-z]');
+        return $name;
+    })->where('name', '[A-Za-z]');
 
-Auth::routes();
+    Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get ('/micontroller',[AdminController::class, 'index']);
+    Route::group(['namespace' => 'Admin'], function () {
 
-Route::get ('/micontroller2',[AdminController::class, 'index1']);
+        Route::get('/micontroller', [AdminController::class, 'index']);
 
-Route::get ('/micontroller3',[AdminController::class, 'index2']);
+        Route::get('/micontroller2', [AdminController::class, 'index1']);
+
+        Route::get('/micontroller3', [AdminController::class, 'index2']);
+    });
