@@ -18,6 +18,13 @@ class CheckAge
      */
     public function handle(Request $request, Closure $next)
     {
+        // %age=17;
+
+        if($request ->age > 15 ){
+
+            return redirect('/nombre/neftali');
+        }
         return $next($request);
+
     }
 }
