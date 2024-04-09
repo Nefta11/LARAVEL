@@ -5,9 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-
-
-class CheckAge
+class MiPrimerMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,15 +14,8 @@ class CheckAge
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next, $maxAge)
+    public function handle(Request $request, Closure $next)
     {
-        // %age=17;
-
-        if($request ->age > 15 && $request ->age < $maxAge){
-
-            return redirect('/nombre/neftali');
-        }
         return $next($request);
-
     }
 }

@@ -56,5 +56,6 @@
 
     Route::get('/inicio', [UserController::class, 'index']);
 
+    Route::get('/inicio',[UserController::class, 'index'])->middleware('checkage:80');
 
     Route::get('/nombre/{name}', [UserController::class, 'showname']);
