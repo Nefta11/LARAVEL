@@ -10,3 +10,9 @@
 ## About Laravel
 
 Laravel es un marco de aplicación web con una sintaxis expresiva y elegante. Creemos que el desarrollo debe ser una experiencia agradable y creativa para ser verdaderamente satisfactoria. Laravel alivia el dolor del desarrollo facilitando tareas comunes utilizadas en muchos proyectos web, tales como:
+
+## Certificado de Finalización de Curso
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nefta11/LARAVEL/main/Certificaci%C3%B3n/Certificacion%20Nefta%20Siuu.jpg" width="600" alt="Certificado de Finalización de Curso">
+</p>
